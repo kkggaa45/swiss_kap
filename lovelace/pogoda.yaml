@@ -4,25 +4,6 @@ cards:
   - type: vertical-stack
     cards:
 
-      - type: custom:decluttering-card
-        template: header_room_2x2
-        variables:
-          - entity_temperature: sensor.openweathermap_temperature_1
-          - entity_humidity: sensor.openweathermap_humidity_1
-          - name_room: Спальня
-          - picture_room: cпальня-квадрат.png
-          - shadow: url(#nm-11)                                                 ### Необязательный параметр
-          - run_script: 'script.m10'                                            ### Необязательный параметр
-          - color_on: blue                                                      ### Необязательный параметр
-        #   - entity_21: sensor.aqara1_battery
-        #   - entity_22: cover.l15_shtora_na_kukhne
-        #   - picture_11_on: лампа-вкл.png
-          - picture_11_off: null-2.png                                      ### см. примечание ниже
-          - picture_12_off: null-2.png                                      ### см. примечание ниже
-          - picture_21_off: null-2.png                                      ### см. примечание ниже
-          - picture_22_off: null-2.png                                      ### см. примечание ниже
-
-
     ### Меню "Дата, часы, погода сегодня"
       - type: custom:decluttering-card
         template: header_weather_time
