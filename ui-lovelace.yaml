@@ -1,0 +1,11 @@
+decluttering_templates:
+  !include lovelace/user_templates/user_templates.yaml
+
+sak_sys_templates:
+  !include www/community/swiss-army-knife-card/sak_templates.yaml
+
+sak_user_templates:
+  !include lovelace/sak_templates/sak_templates.yaml
+
+views:
+  - !include lovelace/pogoda.yaml

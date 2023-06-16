@@ -1,0 +1,27 @@
+homeassistant:
+  latitude: 55.431310
+  longitude: 65.340229
+  elevation: 80
+  unit_system: metric
+  time_zone: Asia/Yekaterinburg
+  packages: !include_dir_merge_named includes/packages
+
+default_config:
+
+frontend:
+  themes: !include_dir_merge_named themes/
+
+lovelace:
+  mode: yaml
+  resources: 
+    - url: /local/community/decluttering-card/decluttering-card.js
+      type: module
+    - url: /local/community/swiss-army-knife-card/swiss-army-knife-card.js
+      type: module  
+
+sensor: !include_dir_merge_list includes/sensors
+binary_sensor: !include_dir_merge_list includes/bin_sensors
+automation: !include_dir_merge_list includes/automations
+switch: !include_dir_merge_list includes/switches
+script: !include_dir_merge_named includes/scripts
+input_boolean: !include includes/input_boolean.yaml
