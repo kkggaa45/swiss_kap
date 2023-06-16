@@ -1,0 +1,32 @@
+termometr:
+
+  sensor:
+
+    - platform: time_date
+      display_options:
+      - 'time'
+      - 'date'
+      - 'date_time'
+      - 'date_time_utc'
+      - 'date_time_iso'
+      - 'time_date'
+      - 'time_utc'
+      - 'beat'
+
+    - platform: template
+      sensors:
+        openweathermap_temperature_1:
+          friendly_name: "Температура"
+          unit_of_measurement: '°C'
+          value_template: "{{ (states['weather.forecast_home'].attributes.temperature|float * 1)|round(1) }}"
+          icon_template: mdi:thermometer
+
+    - platform: template
+      sensors:
+        openweathermap_humidity_1:
+          friendly_name: "Влажность"
+          unit_of_measurement: '%'
+          value_template: "{{ (states['weather.forecast_home'].attributes.humidity|float * 1)|round(0) }}"
+          icon_template: mdi:water-percent
+
+
