@@ -1,0 +1,97 @@
+default:
+  - run_script: 'script.none'
+  - shadow: url(#nm-11)
+  - color_on: var(--primary-background-color)
+  - picture_on: fog-day.svg
+
+card:
+  type: 'custom:swiss-army-knife-card'
+
+  aspectratio: '2/0.16'
+  disable_card: false
+  dev:
+    debug: false
+  layout:
+    styles:
+      card:
+      toolsets:
+        filter: '[[shadow]]'
+    toolsets:
+      - toolset: card-forecast[0]
+        position:
+          cx: 0
+          cy: 0
+        tools:
+##############################################################################
+          - type: rectex
+            position:
+              cx: 150
+              cy: 58
+              width: 200
+              height: 16
+              radius:
+                top_left: 0
+                top_right: 0
+                bottom_right: 0
+                bottom_left: 0
+            styles:
+              rectex:
+                stroke: var(--primary-background-color)
+                fill: '[[color_on]]'
+                opacity: 0.1
+                filter: '[[shadow]]'
+    ####################################################
+          - type: 'circle'
+            position:
+              cx: 60
+              cy: 58
+              radius: 6
+            styles:
+              circle:
+                opacity: 1
+                fill: var(--primary-background-color)
+    ####################################################    0
+          - type: 'usersvg'           
+            position:                
+                cx: 60     
+                cy: 58      
+                height: 11
+                width: 11
+            style: 'images'
+            images:                 
+                - default: /local/main_picture/[[picture_on]]
+    ###################################################
+          - type: 'text'              
+            position:                 
+                cx: 150        
+                cy: 58               
+            text: '[[title]]'
+            styles:
+                text:
+                  font-size: 10em
+                  font-weight: 600
+                  opacity: 0.8
+                  text-anchor: center
+##############################################################################
+          - type: rectex
+            position:
+              cx: 150
+              cy: 58
+              width: 200
+              height: 16
+              radius:
+                top_left: 0
+                top_right: 0
+                bottom_right: 0
+                bottom_left: 0
+            styles:
+              rectex:
+                stroke: var(--primary-background-color)
+                opacity: 0
+            user_actions:
+                tap_action:
+                  haptic: success
+                  actions:
+                    - action: call-service
+                      service: '[[run_script]]'
+##############################################################################
