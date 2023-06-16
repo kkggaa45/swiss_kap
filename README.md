@@ -1,3 +1,3 @@
 # swiss_kap
 
-![alt tag](http://url/to/img.png)
+![alt tag](https://github.com/kkggaa45/swiss_kap/blob/main/readme.png)
