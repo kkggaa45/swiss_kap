@@ -12,5 +12,5 @@
 
 Для построения использованы следующие репозитории:
 - https://github.com/custom-cards/decluttering-card
-- http://192.168.1.39:8123/hacs/repository/214786112
+- https://github.com/AmoebeLabs/swiss-army-knife-card
 
