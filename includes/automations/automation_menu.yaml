@@ -1,0 +1,318 @@
+- alias: m00off
+  initial_state: true
+  trigger:
+    - platform: state
+      entity_id: input_boolean.m00
+      to: "off"
+  action:
+    - service: input_boolean.turn_off
+      entity_id: 
+        - input_boolean.m01
+        - input_boolean.m02
+
+- alias: m00on
+  initial_state: true
+  trigger:
+    - platform: state
+      entity_id: input_boolean.m00
+      to: "on"
+  action:
+    - service: input_boolean.turn_off
+      entity_id: 
+        - input_boolean.m10
+        - input_boolean.m20
+        - input_boolean.m30
+        - input_boolean.m40
+        - input_boolean.m50
+        - input_boolean.m60
+        - input_boolean.m70
+        - input_boolean.m80
+        - input_boolean.m90
+
+#############################################
+- alias: m10off
+  initial_state: true
+  trigger:
+    - platform: state
+      entity_id: input_boolean.m10
+      to: "off"
+  action:
+    - service: input_boolean.turn_off
+      entity_id: 
+        - input_boolean.m11
+        - input_boolean.m12
+
+- alias: m10on
+  initial_state: true
+  trigger:
+    - platform: state
+      entity_id: input_boolean.m10
+      to: "on"
+  action:
+    - service: input_boolean.turn_off
+      entity_id: 
+        - input_boolean.m00
+        - input_boolean.m20
+        - input_boolean.m30
+        - input_boolean.m40
+        - input_boolean.m50
+        - input_boolean.m60
+        - input_boolean.m70
+        - input_boolean.m80
+        - input_boolean.m90
+
+#############################################
+- alias: m20off
+  initial_state: true
+  trigger:
+    - platform: state
+      entity_id: input_boolean.m20
+      to: "off"
+  action:
+    - service: input_boolean.turn_off
+      entity_id: 
+        - input_boolean.m21
+        - input_boolean.m22
+
+- alias: m20on
+  initial_state: true
+  trigger:
+    - platform: state
+      entity_id: input_boolean.m20
+      to: "on"
+  action:
+    - service: input_boolean.turn_off
+      entity_id: 
+        - input_boolean.m00
+        - input_boolean.m10
+        - input_boolean.m30
+        - input_boolean.m40
+        - input_boolean.m50
+        - input_boolean.m60
+        - input_boolean.m70
+        - input_boolean.m80
+        - input_boolean.m90
+
+#############################################
+- alias: m30off
+  initial_state: true
+  trigger:
+    - platform: state
+      entity_id: input_boolean.m30
+      to: "off"
+  action:
+    - service: input_boolean.turn_off
+      entity_id: 
+        - input_boolean.m31
+        - input_boolean.m32
+
+- alias: m30on
+  initial_state: true
+  trigger:
+    - platform: state
+      entity_id: input_boolean.m30
+      to: "on"
+  action:
+    - service: input_boolean.turn_off
+      entity_id: 
+        - input_boolean.m00
+        - input_boolean.m10
+        - input_boolean.m20
+        - input_boolean.m40
+        - input_boolean.m50
+        - input_boolean.m60
+        - input_boolean.m70
+        - input_boolean.m80
+        - input_boolean.m90
+
+#############################################
+- alias: m40off
+  initial_state: true
+  trigger:
+    - platform: state
+      entity_id: input_boolean.m40
+      to: "off"
+  action:
+    - service: input_boolean.turn_off
+      entity_id: 
+        - input_boolean.m41
+        - input_boolean.m42
+
+- alias: m40on
+  initial_state: true
+  trigger:
+    - platform: state
+      entity_id: input_boolean.m40
+      to: "on"
+  action:
+    - service: input_boolean.turn_off
+      entity_id: 
+        - input_boolean.m00
+        - input_boolean.m10
+        - input_boolean.m20
+        - input_boolean.m30
+        - input_boolean.m50
+        - input_boolean.m60
+        - input_boolean.m70
+        - input_boolean.m80
+        - input_boolean.m90
+
+#############################################
+- alias: m50off
+  initial_state: true
+  trigger:
+    - platform: state
+      entity_id: input_boolean.m50
+      to: "off"
+  action:
+    - service: input_boolean.turn_off
+      entity_id: 
+        - input_boolean.m51
+        - input_boolean.m52
+
+- alias: m50on
+  initial_state: true
+  trigger:
+    - platform: state
+      entity_id: input_boolean.m50
+      to: "on"
+  action:
+    - service: input_boolean.turn_off
+      entity_id: 
+        - input_boolean.m00
+        - input_boolean.m10
+        - input_boolean.m20
+        - input_boolean.m30
+        - input_boolean.m40
+        - input_boolean.m60
+        - input_boolean.m70
+        - input_boolean.m80
+        - input_boolean.m90
+
+#############################################
+- alias: m60off
+  initial_state: true
+  trigger:
+    - platform: state
+      entity_id: input_boolean.m60
+      to: "off"
+  action:
+    - service: input_boolean.turn_off
+      entity_id: 
+        - input_boolean.m61
+        - input_boolean.m62
+
+- alias: m60on
+  initial_state: true
+  trigger:
+    - platform: state
+      entity_id: input_boolean.m60
+      to: "on"
+  action:
+    - service: input_boolean.turn_off
+      entity_id: 
+        - input_boolean.m00
+        - input_boolean.m10
+        - input_boolean.m20
+        - input_boolean.m30
+        - input_boolean.m40
+        - input_boolean.m50
+        - input_boolean.m70
+        - input_boolean.m80
+        - input_boolean.m90
+
+#############################################
+- alias: m70off
+  initial_state: true
+  trigger:
+    - platform: state
+      entity_id: input_boolean.m70
+      to: "off"
+  action:
+    - service: input_boolean.turn_off
+      entity_id: 
+        - input_boolean.m71
+        - input_boolean.m72
+
+- alias: m70on
+  initial_state: true
+  trigger:
+    - platform: state
+      entity_id: input_boolean.m70
+      to: "on"
+  action:
+    - service: input_boolean.turn_off
+      entity_id: 
+        - input_boolean.m00
+        - input_boolean.m10
+        - input_boolean.m20
+        - input_boolean.m30
+        - input_boolean.m40
+        - input_boolean.m50
+        - input_boolean.m60
+        - input_boolean.m80
+        - input_boolean.m90
+
+#############################################
+- alias: m80off
+  initial_state: true
+  trigger:
+    - platform: state
+      entity_id: input_boolean.m80
+      to: "off"
+  action:
+    - service: input_boolean.turn_off
+      entity_id: 
+        - input_boolean.m81
+        - input_boolean.m82
+
+- alias: m80on
+  initial_state: true
+  trigger:
+    - platform: state
+      entity_id: input_boolean.m80
+      to: "on"
+  action:
+    - service: input_boolean.turn_off
+      entity_id: 
+        - input_boolean.m00
+        - input_boolean.m10
+        - input_boolean.m20
+        - input_boolean.m30
+        - input_boolean.m40
+        - input_boolean.m50
+        - input_boolean.m60
+        - input_boolean.m70
+        - input_boolean.m90
+
+#############################################
+- alias: m90off
+  initial_state: true
+  trigger:
+    - platform: state
+      entity_id: input_boolean.m90
+      to: "off"
+  action:
+    - service: input_boolean.turn_off
+      entity_id: 
+        - input_boolean.m91
+        - input_boolean.m92
+
+- alias: m90on
+  initial_state: true
+  trigger:
+    - platform: state
+      entity_id: input_boolean.m90
+      to: "on"
+  action:
+    - service: input_boolean.turn_off
+      entity_id: 
+        - input_boolean.m00
+        - input_boolean.m10
+        - input_boolean.m20
+        - input_boolean.m30
+        - input_boolean.m40
+        - input_boolean.m50
+        - input_boolean.m60
+        - input_boolean.m70
+        - input_boolean.m80
