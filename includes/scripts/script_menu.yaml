@@ -1,0 +1,192 @@
+m00:
+    alias: m00
+    sequence:
+      - service: input_boolean.toggle
+        target:
+            entity_id: input_boolean.m00
+m01:
+    alias: m01
+    sequence:
+      - service: input_boolean.toggle
+        target:
+            entity_id: input_boolean.m01
+m02:
+    alias: m02
+    sequence:
+      - service: input_boolean.toggle
+        target:
+            entity_id: input_boolean.m02
+
+m10:
+    alias: m10
+    sequence:
+      - service: input_boolean.toggle
+        target:
+            entity_id: input_boolean.m10
+
+m11:
+    alias: m11
+    sequence:
+      - service: input_boolean.toggle
+        target:
+            entity_id: input_boolean.m11
+
+m12:
+    alias: m12
+    sequence:
+      - service: input_boolean.toggle
+        target:
+            entity_id: input_boolean.m12
+
+m20:
+    alias: m20
+    sequence:
+      - service: input_boolean.toggle
+        target:
+            entity_id: input_boolean.m20
+m21:
+    alias: m21
+    sequence:
+      - service: input_boolean.toggle
+        target:
+            entity_id: input_boolean.m21
+m22:
+    alias: m22
+    sequence:
+      - service: input_boolean.toggle
+        target:
+            entity_id: input_boolean.m22
+
+m30:
+    alias: m30
+    sequence:
+      - service: input_boolean.toggle
+        target:
+            entity_id: input_boolean.m30
+m31:
+    alias: m31
+    sequence:
+      - service: input_boolean.toggle
+        target:
+            entity_id: input_boolean.m31
+m32:
+    alias: m32
+    sequence:
+      - service: input_boolean.toggle
+        target:
+            entity_id: input_boolean.m32
+
+m40:
+    alias: m40
+    sequence:
+      - service: input_boolean.toggle
+        target:
+            entity_id: input_boolean.m40
+m41:
+    alias: m41
+    sequence:
+      - service: input_boolean.toggle
+        target:
+            entity_id: input_boolean.m41
+m42:
+    alias: m42
+    sequence:
+      - service: input_boolean.toggle
+        target:
+            entity_id: input_boolean.m42
+
+m50:
+    alias: m50
+    sequence:
+      - service: input_boolean.toggle
+        target:
+            entity_id: input_boolean.m50
+m51:
+    alias: m51
+    sequence:
+      - service: input_boolean.toggle
+        target:
+            entity_id: input_boolean.m51
+m52:
+    alias: m52
+    sequence:
+      - service: input_boolean.toggle
+        target:
+            entity_id: input_boolean.m52
+
+m60:
+    alias: m60
+    sequence:
+      - service: input_boolean.toggle
+        target:
+            entity_id: input_boolean.m60
+m61:
+    alias: m61
+    sequence:
+      - service: input_boolean.toggle
+        target:
+            entity_id: input_boolean.m61
+m62:
+    alias: m62
+    sequence:
+      - service: input_boolean.toggle
+        target:
+            entity_id: input_boolean.m62
+
+m70:
+    alias: m70
+    sequence:
+      - service: input_boolean.toggle
+        target:
+            entity_id: input_boolean.m70
+m71:
+    alias: m71
+    sequence:
+      - service: input_boolean.toggle
+        target:
+            entity_id: input_boolean.m71
+m72:
+    alias: m72
+    sequence:
+      - service: input_boolean.toggle
+        target:
+            entity_id: input_boolean.m72
+
+m80:
+    alias: m80
+    sequence:
+      - service: input_boolean.toggle
+        target:
+            entity_id: input_boolean.m80
+m81:
+    alias: m81
+    sequence:
+      - service: input_boolean.toggle
+        target:
+            entity_id: input_boolean.m81
+m82:
+    alias: m82
+    sequence:
+      - service: input_boolean.toggle
+        target:
+            entity_id: input_boolean.m82
+
+m90:
+    alias: m90
+    sequence:
+      - service: input_boolean.toggle
+        target:
+            entity_id: input_boolean.m90
+m91:
+    alias: m91
+    sequence:
+      - service: input_boolean.toggle
+        target:
+            entity_id: input_boolean.m91
+m92:
+    alias: m92
+    sequence:
+      - service: input_boolean.toggle
+        target:
+            entity_id: input_boolean.m92
+
