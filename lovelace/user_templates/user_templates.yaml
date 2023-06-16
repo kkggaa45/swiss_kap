@@ -1,0 +1,12 @@
+header_title_1_line:
+  !include header_title_1_line.yaml
+
+weather_1h:
+  !include weather_1h.yaml
+
+weather_1d:
+  !include weather_1d.yaml
+
+header_weather_time:
+  !include header_weather_time.yaml
+
