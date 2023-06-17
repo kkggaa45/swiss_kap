@@ -6,6 +6,7 @@
 - Суточный прогноз погоды
 #
 Подробности установки в видео:
+https://youtu.be/uH5HBbDr9wg
 #
 ![alt tag](https://github.com/kkggaa45/swiss_kap/blob/main/readme.png)
 #
