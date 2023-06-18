@@ -4,6 +4,7 @@
 добавлена карта:
  - Погода сегодня подробно (template: weather_today_detail)
 ![alt tag](https://github.com/kkggaa45/swiss_kap/blob/main/github_pict/readme_1.png)
+
 добавлена вкладка "title: all_in_one", здесь постепенно будет создаваться интерфейс для смартфона или планшета
 
 # 17.06.2023
@@ -12,6 +13,7 @@
  - Заголовок - разделитель (template: header_title_1_line)
  - Почасовой прогноз погоды (template: weather_1h)
  - Суточный прогноз погоды (template: weather_1d)
+
 вкладка "title: Погода"
 #
 Подробности установки в видео:
