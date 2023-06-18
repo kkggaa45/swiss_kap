@@ -8,4 +8,5 @@ sak_user_templates:
   !include lovelace/sak_templates/sak_templates.yaml
 
 views:
+  - !include lovelace/all_in_one.yaml
   - !include lovelace/pogoda.yaml
