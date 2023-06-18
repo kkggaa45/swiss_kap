@@ -1,0 +1,198 @@
+title: all_in_one
+cards:
+
+  - type: vertical-stack
+    cards:
+    ### Меню "Дата, часы, погода сегодня"
+      - type: custom:decluttering-card
+        template: header_weather_time
+        variables:
+          - entity_weather: weather.forecast_home
+          - shadow: url(#nm-11)                                             ### Необязательный параметр
+          - run_script: 'script.m00'                                        ### Необязательный параметр
+          - color_on: blue                                                  ### Необязательный параметр
+    ### Если нажато Меню "Дата, часы, погода сегодня" - открыть / закрыть подробный прогноз погоды 
+      - type: conditional
+        conditions:
+          - entity: input_boolean.m00
+            state: "on"
+        card:
+            type: vertical-stack
+            cards:
+            ### Заголовок - Почасовой прогноз погоды
+              - type: custom:decluttering-card
+                template: weather_today_detail
+                variables:
+                  - entity_weather: weather.forecast_home
+                  - shadow: none                                            ### Необязательный параметр
+                  - color_on: orange                                        ### Необязательный параметр
+                  - run_script: 'script.m00'                                ### Необязательный параметр
+            ### Заголовок - Почасовой прогноз погоды
+              - type: custom:decluttering-card
+                template: header_title_1_line
+                variables:
+                  - title: Почасовой прогноз погоды
+                  - picture_on: sunset.svg                                  ### Необязательный параметр
+                  - shadow: none                                            ### Необязательный параметр
+                  - run_script: 'script.m01'                                ### Необязательный параметр
+                  - color_on: green                                         ### Необязательный параметр
+            ### Если нажат заголовок "Почасовой прогноз погоды", то открыть / закрыть почасовой прогноз погоды
+              - type: conditional
+                conditions:
+                  - entity: input_boolean.m01
+                    state: "on"
+                card:
+                    type: vertical-stack
+                    cards:
+                    ### Почасовой прогноз - следующий час
+                      - type: custom:decluttering-card
+                        template: weather_1h
+                        variables:
+                          - entity_weather: weather.forecast_home_hourly
+                          - shift_h: 0                                      ### значение о 0 до 9, где 0 - следующий час, 9 - это прогноз через 10 часов
+                          - shadow: none                                    ### Необязательный параметр
+                          - run_script: 'script.m01'                        ### Необязательный параметр
+                          - color_on: orange                                ### Необязательный параметр
+                    ### Почасовой прогноз - +2 часа
+                      - type: custom:decluttering-card
+                        template: weather_1h
+                        variables:
+                          - entity_weather: weather.forecast_home_hourly
+                          - shift_h: 1                                      ### значение о 0 до 9, где 0 - следующий час, 9 - это прогноз через 10 часов
+                          - shadow: none                                    ### Необязательный параметр
+                          - run_script: 'script.m01'                        ### Необязательный параметр
+                          - color_on: orange                                ### Необязательный параметр
+                    ### Почасовой прогноз - +3 часа
+                      - type: custom:decluttering-card
+                        template: weather_1h
+                        variables:
+                          - entity_weather: weather.forecast_home_hourly
+                          - shift_h: 2                                      ### значение о 0 до 9, где 0 - следующий час, 9 - это прогноз через 10 часов
+                          - shadow: none                                    ### Необязательный параметр
+                          - run_script: 'script.m01'                        ### Необязательный параметр
+                          - color_on: orange                                ### Необязательный параметр
+                    ### Почасовой прогноз - +4 часа
+                      - type: custom:decluttering-card
+                        template: weather_1h
+                        variables:
+                          - entity_weather: weather.forecast_home_hourly
+                          - shift_h: 3                                      ### значение о 0 до 9, где 0 - следующий час, 9 - это прогноз через 10 часов
+                          - shadow: none                                    ### Необязательный параметр
+                          - run_script: 'script.m01'                        ### Необязательный параметр
+                          - color_on: orange                                ### Необязательный параметр
+                    ### Почасовой прогноз - +5 часов
+                      - type: custom:decluttering-card
+                        template: weather_1h
+                        variables:
+                          - entity_weather: weather.forecast_home_hourly
+                          - shift_h: 4                                      ### значение о 0 до 9, где 0 - следующий час, 9 - это прогноз через 10 часов
+                          - shadow: none                                    ### Необязательный параметр
+                          - run_script: 'script.m01'                        ### Необязательный параметр
+                          - color_on: orange                                ### Необязательный параметр
+                    ### Почасовой прогноз - +6 часов
+                      - type: custom:decluttering-card
+                        template: weather_1h
+                        variables:
+                          - entity_weather: weather.forecast_home_hourly
+                          - shift_h: 5                                      ### значение о 0 до 9, где 0 - следующий час, 9 - это прогноз через 10 часов
+                          - shadow: none                                    ### Необязательный параметр
+                          - run_script: 'script.m01'                        ### Необязательный параметр
+                          - color_on: orange                                ### Необязательный параметр
+                    ### Почасовой прогноз - +7 часов
+                      - type: custom:decluttering-card
+                        template: weather_1h
+                        variables:
+                          - entity_weather: weather.forecast_home_hourly
+                          - shift_h: 6                                      ### значение о 0 до 9, где 0 - следующий час, 9 - это прогноз через 10 часов
+                          - shadow: none                                    ### Необязательный параметр
+                          - run_script: 'script.m01'                        ### Необязательный параметр
+                          - color_on: orange                                ### Необязательный параметр
+                    ### Почасовой прогноз - +8 часов
+                      - type: custom:decluttering-card
+                        template: weather_1h
+                        variables:
+                          - entity_weather: weather.forecast_home_hourly
+                          - shift_h: 7                                      ### значение о 0 до 9, где 0 - следующий час, 9 - это прогноз через 10 часов
+                          - shadow: none                                    ### Необязательный параметр
+                          - run_script: 'script.m01'                        ### Необязательный параметр
+                          - color_on: orange                                ### Необязательный параметр
+                    ### Почасовой прогноз - +9 часов
+                      - type: custom:decluttering-card
+                        template: weather_1h
+                        variables:
+                          - entity_weather: weather.forecast_home_hourly
+                          - shift_h: 8                                      ### значение о 0 до 9, где 0 - следующий час, 9 - это прогноз через 10 часов
+                          - shadow: none                                    ### Необязательный параметр
+                          - run_script: 'script.m01'                        ### Необязательный параметр
+                          - color_on: orange                                ### Необязательный параметр
+                    ### Почасовой прогноз - +10 часов
+                      - type: custom:decluttering-card
+                        template: weather_1h
+                        variables:
+                          - entity_weather: weather.forecast_home_hourly
+                          - shift_h: 9                                      ### значение о 0 до 9, где 0 - следующий час, 9 - это прогноз через 10 часов
+                          - shadow: none                                    ### Необязательный параметр
+                          - run_script: 'script.m01'                        ### Необязательный параметр
+                          - color_on: orange                                ### Необязательный параметр
+            ### Заголовок - Почасовой прогноз погоды
+              - type: custom:decluttering-card
+                template: header_title_1_line
+                variables:
+                  - title: Прогноз погоды на 5 дней
+                  - picture_on: sunset.svg                                  ### Необязательный параметр
+                  - shadow: none                                            ### Необязательный параметр
+                  - run_script: 'script.m02'                                ### Необязательный параметр
+                  - color_on: green                                         ### Необязательный параметр
+            ### Если нажат заголовок "Прогноз погоды на 5 дней", то открыть / закрыть суточный прогноз погоды
+              - type: conditional
+                conditions:
+                  - entity: input_boolean.m02
+                    state: "on"
+                card:
+                    type: vertical-stack
+                    cards:
+                    ### Суточный прогноз - следующий день
+                      - type: custom:decluttering-card
+                        template: weather_1d
+                        variables:
+                          - shift_d: 0                                      ### значение о 0 до 4, где 0 - следующий день, 4 - это прогноз на 5-ый день
+                          - entity_weather: weather.forecast_home
+                          - shadow: none                                    ### Необязательный параметр
+                          - run_script: 'script.m02'                        ### Необязательный параметр
+                          - color_on: orange                                ### Необязательный параметр
+                    ### Суточный прогноз - прогноз на 2-ой день
+                      - type: custom:decluttering-card
+                        template: weather_1d
+                        variables:
+                          - shift_d: 1                                      ### значение о 0 до 4, где 0 - следующий день, 4 - это прогноз на 5-ый день
+                          - entity_weather: weather.forecast_home
+                          - shadow: none                                    ### Необязательный параметр
+                          - run_script: 'script.m02'                        ### Необязательный параметр
+                          - color_on: orange                                ### Необязательный параметр
+                    ### Суточный прогноз - прогноз на 3-ий день
+                      - type: custom:decluttering-card
+                        template: weather_1d
+                        variables:
+                          - shift_d: 2                                      ### значение о 0 до 4, где 0 - следующий день, 4 - это прогноз на 5-ый день
+                          - entity_weather: weather.forecast_home
+                          - shadow: none                                    ### Необязательный параметр
+                          - run_script: 'script.m02'                        ### Необязательный параметр
+                          - color_on: orange                                ### Необязательный параметр
+                    ### Суточный прогноз - прогноз на 4-ый день
+                      - type: custom:decluttering-card
+                        template: weather_1d
+                        variables:
+                          - shift_d: 3                                      ### значение о 0 до 4, где 0 - следующий день, 4 - это прогноз на 5-ый день
+                          - entity_weather: weather.forecast_home
+                          - shadow: none                                    ### Необязательный параметр
+                          - run_script: 'script.m02'                        ### Необязательный параметр
+                          - color_on: orange                                ### Необязательный параметр
+                    ### Суточный прогноз - прогноз на 5-ый день
+                      - type: custom:decluttering-card
+                        template: weather_1d
+                        variables:
+                          - shift_d: 4                                      ### значение о 0 до 4, где 0 - следующий день, 4 - это прогноз на 5-ый день
+                          - entity_weather: weather.forecast_home
+                          - shadow: none                                    ### Необязательный параметр
+                          - run_script: 'script.m02'                        ### Необязательный параметр
+                          - color_on: orange                                ### Необязательный параметр
