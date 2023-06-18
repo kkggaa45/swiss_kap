@@ -14,7 +14,6 @@ https://youtu.be/uH5HBbDr9wg
 начальная установка, добавлены карты:
  - Заголовок с текущими значениями времени, даты, погоды (template: header_weather_time)
  - Заголовок - разделитель (template: header_title_1_line)
- - Заголовок - разделитель ({\color{red}template: header_title_1_line})
  - Почасовой прогноз погоды (template: weather_1h)
  - Суточный прогноз погоды (template: weather_1d)
 ![alt tag](https://github.com/kkggaa45/swiss_kap/blob/main/github_pict/readme.png)
