@@ -9,4 +9,7 @@ weather_1d:
 
 header_weather_time:
   !include header_weather_time.yaml
+  
+weather_today_detail:
+  !include weather_today_detail.yaml
 
