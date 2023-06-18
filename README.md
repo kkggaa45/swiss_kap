@@ -8,7 +8,7 @@
 Подробности установки в видео:
 https://youtu.be/uH5HBbDr9wg
 #
-![alt tag](https://github.com/kkggaa45/swiss_kap/blob/main/readme.png)
+![alt tag](https://github.com/kkggaa45/swiss_kap/blob/main/github_pict/readme.png)
 #
 Для построения использованы следующие репозитории:
 - https://github.com/custom-cards/decluttering-card
