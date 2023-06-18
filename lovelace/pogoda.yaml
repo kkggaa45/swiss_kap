@@ -13,6 +13,16 @@ cards:
           - run_script: 'script.m00'                                        ### Необязательный параметр
           - color_on: blue                                                  ### Необязательный параметр
 
+    ### Погода сейчас
+      - type: custom:decluttering-card
+        template: weather_today_detail
+        variables:
+          - entity_weather: weather.forecast_home
+          - shadow: none                                            ### Необязательный параметр
+          - color_on: orange                                        ### Необязательный параметр
+          - run_script: 'script.m00'                                ### Необязательный параметр
+
+
     ### Меню "Почасовой прогноз погоды"
       - type: custom:decluttering-card
         template: header_title_1_line
