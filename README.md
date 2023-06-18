@@ -13,7 +13,7 @@ https://youtu.be/uH5HBbDr9wg
 # 17.06.2023
 начальная установка, добавлены карты:
  - Заголовок с текущими значениями времени, даты, погоды (template: header_weather_time)
- - Заголовок - разделитель (diff red template: header_title_1_line)
+ - Заголовок - разделитель ($${\color{red}Red}$$ template: header_title_1_line)
  - Почасовой прогноз погоды (template: weather_1h)
  - Суточный прогноз погоды (template: weather_1d)
 ![alt tag](https://github.com/kkggaa45/swiss_kap/blob/main/github_pict/readme.png)
