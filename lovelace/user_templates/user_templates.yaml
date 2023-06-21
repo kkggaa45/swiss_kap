@@ -13,3 +13,20 @@ header_weather_time:
 weather_today_detail:
   !include weather_today_detail.yaml
 
+main-box-sensor:
+  !include main-box-sensor.yaml
+
+main-circle-sensor:
+  !include main-circle-sensor.yaml
+  
+main-box-termometr:
+  !include main-box-termometr.yaml
+
+main-circle-termometr:
+  !include main-circle-termometr.yaml
+  
+main-circle-percent:
+  !include main-circle-percent.yaml
+
+main-circle-percent-battery:
+  !include main-circle-percent-battery.yaml
