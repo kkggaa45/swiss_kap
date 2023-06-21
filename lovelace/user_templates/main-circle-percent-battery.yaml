@@ -1,0 +1,260 @@
+default:
+  - run_script: 'script.none'
+  - color_on: var(--primary-background-color)
+  - shadow: url(#nm-11)
+
+card:
+  type: 'custom:swiss-army-knife-card'
+
+  entities: 
+    - entity: '[[entity_sensor]]'
+      name: '[[name_sensor]]'
+      picture_on: '[[picture_sensor]]'
+      decimals: 0
+      color_on: '[[color_on]]'
+
+    - entity: '[[entity_sensor]]'
+      secondary_info: last_updated
+      format: relative
+
+    - entity: '[[entity_battery]]'
+      decimals: 0
+
+  aspectratio: 1/1
+  dev:
+    debug: false
+    ts: true
+  
+  layout:
+    styles:
+      toolsets:
+        filter: '[[shadow]]'
+
+    toolsets:
+      - toolset: square-sensor
+        position:
+          cx: 50
+          cy: 50
+          scale: 1
+        tools:
+
+    ####################################################
+          - type: circle
+            position:
+              cx: 50
+              cy: 50
+              radius: 46
+            entity_index: 0
+            styles:
+              circle:
+                pointer-events: none
+                stroke-width: 5
+                fill: '[[color_on]]'
+                filter: '[[shadow]]'
+    ####################################################
+          - type: 'usersvg'           
+            entity_index: 0
+            position:                
+                cx: 50      
+                cy: 66       
+                height: 22   
+                width: 22
+            style: 'images'
+            images:             
+              - default: /local/main_picture/[[picture_sensor]]
+    #################################################### ок
+          - type: state
+            position:
+              cx: 50
+              cy: 82
+            entity_index: 1
+            styles:
+              state:
+                text-anchor: center
+                font-size: 5em
+                font-weight: 500
+                opacity: 0.8
+              uom: 
+                opacity: 0
+    #################################################### ок
+          - type: 'segarc'
+            id: 0
+            position:
+              cx: 50
+              cy: 50
+              start_angle: -141
+              end_angle: 141
+              width: 5
+              radius_x: 43
+              radius_y: 43
+            entity_index: 0
+            scale:
+              min: 0
+              max: 100
+              width: 1
+              offset: -6.2
+            show:
+              scale: true
+              style: 'colorstops'
+            segments:
+              colorstops:
+                gap: 1
+                colors:
+                  0:  '#92000A'
+                  10: '#FF0000'
+                  20: '#FF8800'
+                  30: '#FFD600'
+                  40: '#FFFF00'
+                  50: '#CCFF00'
+                  60: '#7FFF00'
+                  70: '#00FF00'
+                  80: '#1CC606'
+                  90: '#009900'
+            styles:
+              foreground:
+                fill: darkgrey
+              background:
+                fill: var(--theme-scale)
+    ####################################################
+          - type: state
+            position:
+              cx: 50
+              cy: 32
+            entity_index: 0
+            styles:
+              state:
+                text-anchor: center
+                font-size: 25em
+                font-weight: 350
+                opacity: 1
+                filter: '[[shadow]]'
+    ####################################################
+          - type: name
+            position:
+              cx: 50
+              cy: 47
+            entity_index: 0
+            styles:
+              name:
+                text-anchor: center
+                font-size: 9em
+                font-weight: 450
+                filter: '[[shadow]]'
+    ####################################################
+          - type: 'line'             
+            position:          
+                orientation: 'horizontal'
+                cx: 50               
+                cy: 51.5          
+                length: 60      
+            styles:
+              line:
+                opacity: 0.5
+          - type: 'line'             
+            position:          
+                orientation: 'horizontal'
+                cx: 50               
+                cy: 52.5        
+                length: 56      
+            styles:
+              line:
+                opacity: 0.5
+    ####################################################
+          - type: bar
+            entity_index: 0
+            position:
+              orientation: vertical
+              cx: 50
+              cy: 66.5
+              width: 42
+              height: 25
+              margin: .5
+            hours: 24
+            barhours: 1
+            styles:
+              bar:
+                stroke: var(--primary-text-color)
+                opacity: 0.5
+                stroke-linecap: butt
+    #################################################### ок
+          - type: 'segarc'
+            id: 0
+            position:
+              cx: 50
+              cy: 86
+              start_angle: -10
+              end_angle: 10
+              width: 1
+              radius_x: 120
+              radius_y: 1
+            entity_index: 2
+            scale:
+              min: 0
+              max: 100
+              width: 1
+              offset: -1.5
+            show:
+              scale: true
+              style: 'colorstops'
+            segments:
+              colorstops:
+                gap: 0.1
+                colors:
+                  0:  '#92000A'
+                  10: '#FF0000'
+                  20: '#FF8800'
+                  30: '#FFD600'
+                  40: '#FFFF00'
+                  50: '#CCFF00'
+                  60: '#7FFF00'
+                  70: '#00FF00'
+                  80: '#1CC606'
+                  90: '#009900'
+            styles:
+              foreground:
+                fill: darkgrey
+                opacity: 0.8
+              background:
+                fill: var(--theme-scale)
+                opacity: 0.8
+    #################################################### ок
+          - type: state
+            position:
+              cx: 50
+              cy: 91
+            entity_index: 2
+            styles:
+              state:
+                text-anchor: center
+                font-size: 5em
+                font-weight: 500
+                opacity: 0.8
+    ####################################################
+          - type: rectex
+            position:
+              cx: 50
+              cy: 50
+              width: 100
+              height: 100
+              radius:
+                top_left: 0
+                top_right: 0
+                bottom_right: 0
+                bottom_left: 0
+            styles:
+              rectex:
+                stroke: var(--primary-background-color)
+                opacity: 0
+            user_actions:
+                tap_action:
+                  haptic: success
+                  actions:
+                    - action: call-service
+                      service: '[[run_script]]'
+    ####################################################
+
+
+
+
+
+
