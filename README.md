@@ -3,19 +3,35 @@
 Подробности установки в видео:
 https://youtu.be/uH5HBbDr9wg
 
-# 18.06.2023
-добавлена карта:
+# 21.06.2023
+добавлены карты:
  - Погода сегодня подробно (template: weather_today_detail)
 ![alt tag](https://github.com/kkggaa45/swiss_kap/blob/main/github_pict/readme_1.png)
+
+добавлена вкладка "title: Сенсоры", здесь постепенно будет создаваться интерфейс для смартфона или планшета
+#
+# 18.06.2023
+добавлена карта:
+ - Датчики квадратные с батарейкой 				(template: main-box-sensor)
+ - Датчики круглые с батарейкой 				(template: main-circle-sensor)
+![alt tag](https://github.com/kkggaa45/swiss_kap/blob/main/github_pict/readme_2.png)
+
+ - Влажность, температура квадратная с батарейкой 		(template: main-box-termometr)
+ - Влажность, температура круглые с батарейкой 			(template: main-circle-termometr)
+![alt tag](https://github.com/kkggaa45/swiss_kap/blob/main/github_pict/readme_3.png)
+
+ - Датчики круглые в процентах без батарейки 			(template: main-circle-percent)
+ - Датчики круглые в процентах с батарейкой 			(template: main-circle-percent-battery)
+![alt tag](https://github.com/kkggaa45/swiss_kap/blob/main/github_pict/readme_4.png)
 
 добавлена вкладка "title: all_in_one", здесь постепенно будет создаваться интерфейс для смартфона или планшета
 #
 # 17.06.2023
 начальная установка, добавлены карты:
- - Заголовок с текущими значениями времени, даты, погоды (template: header_weather_time)
- - Заголовок - разделитель (template: header_title_1_line)
- - Почасовой прогноз погоды (template: weather_1h)
- - Суточный прогноз погоды (template: weather_1d)
+ - Заголовок с текущими значениями времени, даты, погоды 	(template: header_weather_time)
+ - Заголовок - разделитель 					(template: header_title_1_line)
+ - Почасовой прогноз погоды 					(template: weather_1h)
+ - Суточный прогноз погоды 					(template: weather_1d)
 ![alt tag](https://github.com/kkggaa45/swiss_kap/blob/main/github_pict/readme.png)
 
 вкладка "title: Погода"
