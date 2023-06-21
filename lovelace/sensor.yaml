@@ -1,0 +1,92 @@
+title: Сенсоры
+cards:
+
+  - type: vertical-stack
+    cards:
+      - type: entities
+        entities:
+          - entity: input_boolean.sensor_temp 
+            name: эмулятор сенсора
+
+      - type: horizontal-stack
+        cards:
+    
+        ### Датчики квадратные с батарейкой
+          - type: custom:decluttering-card
+            template: main-box-sensor
+            variables:
+              - entity_sensor: input_boolean.sensor_temp                    ##### Здесь указать сенсор
+              - entity_battery: sensor.openweathermap_humidity_1            ##### Здесь указать сенсор заряда батарейки
+              - name_sensor: Окно
+              - picture_on: окно_откр.png
+              - picture_off: окно_закр.png
+              - shadow: url(#nm-11)                                 
+              - color_on: '#A58CD4'                          
+              - run_script: 'script.none'                  
+
+        ### Датчики круглые с батарейкой
+          - type: custom:decluttering-card
+            template: main-circle-sensor
+            variables:
+              - entity_sensor: input_boolean.sensor_temp                    ##### Здесь указать сенсор
+              - entity_battery: sensor.openweathermap_humidity_1            ##### Здесь указать сенсор заряда батарейки
+              - name_sensor: Дверь
+              - picture_on: дверь-откр.png
+              - picture_off: дверь-закр.png
+              - shadow: url(#nm-11)                                 
+              - color_on: '#A58CD4'                          
+              - run_script: 'script.none'                  
+
+      - type: horizontal-stack
+        cards:
+    
+        ### Влажность, температура квадратная с батарейкой
+          - type: custom:decluttering-card
+            template: main-box-termometr
+            variables:
+              - entity_temperature: sensor.openweathermap_temperature_1     ##### Здесь указать сенсор температура
+              - entity_humidity:   sensor.openweathermap_humidity_1         ##### Здесь указать сенсор Влажность
+              - entity_battery: sensor.openweathermap_humidity_1            ##### Здесь указать сенсор заряда батарейки
+              - name_sensor: Спальня
+              - shadow: url(#nm-11)                                 
+              - color_on: '#A58CD4'                          
+              - run_script: 'script.none'                    
+
+        ### Влажность, температура круглые с батарейкой
+          - type: custom:decluttering-card
+            template: main-circle-termometr
+            variables:
+              - entity_temperature: sensor.openweathermap_temperature_1     ##### Здесь указать сенсор температура
+              - entity_humidity:   sensor.openweathermap_humidity_1         ##### Здесь указать сенсор Влажность
+              - entity_battery: sensor.openweathermap_humidity_1            ##### Здесь указать сенсор заряда батарейки
+              - shadow: url(#nm-11)                                 
+              - color_on: '#A58CD4'                          
+              - run_script: 'script.none'                    
+
+
+      - type: horizontal-stack
+        cards:
+    
+        ###  Датчики круглые в процентах без батарейки
+          - type: custom:decluttering-card
+            template: main-circle-percent
+            variables:
+              - entity_sensor:   sensor.openweathermap_humidity_1           ##### Здесь указать сенсор 
+              - name_sensor: Влажность
+              - picture_sensor: влажность.png
+              - color_on: '#A58CD4'                          
+              - shadow: url(#nm-11)                                 
+              - run_script: 'script.none'         
+              
+         ###  Датчики круглые в процентах с батарейкой
+          - type: custom:decluttering-card
+            template: main-circle-percent-battery
+            variables:
+              - entity_sensor:   sensor.openweathermap_humidity_1           ##### Здесь указать сенсор 
+              - entity_battery: sensor.openweathermap_humidity_1            ##### Здесь указать сенсор заряда батарейки
+              - name_sensor: Влажность
+              - picture_sensor: влажность.png
+              - color_on: '#A58CD4'                          
+              - shadow: url(#nm-11)                                 
+              - run_script: 'script.none'         
+
