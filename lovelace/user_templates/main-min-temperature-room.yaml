@@ -1,0 +1,260 @@
+default:
+  - run_script: 'script.none'
+  - decimals_temperature: 1
+  - color_on: var(--primary-background-color)
+  - shadow: url(#nm-11)
+
+card:
+  type: 'custom:swiss-army-knife-card'
+
+  entities: 
+    - entity: '[[entity_temperature]]'
+      decimals: '[[decimals_temperature]]'
+
+    - entity: '[[entity_temperature]]'
+      secondary_info: last_updated
+      format: relative
+
+    - entity: '[[entity_battery]]'
+      decimals: 0
+
+  aspectratio: 2.1/1
+  dev:
+    debug: false
+    ts: true
+  
+  layout:
+    styles:
+      toolsets:
+        filter: '[[shadow]]'
+
+    toolsets:
+      - toolset: square-sensor
+        position:
+          cx: 50
+          cy: 50
+          scale: 1
+        tools:
+    ####################################################
+          - type: rectex
+            position:
+              cx: 105
+              cy: 50
+              width: 200
+              height: 90
+              radius:
+                top_left: 50
+                top_right: 10
+                bottom_right: 10
+                bottom_left: 50
+            styles:
+              rectex:
+                stroke: var(--primary-background-color)
+                fill: '[[color_on]]'
+
+    ####################################################
+          - type: 'segarc'
+            position:               
+                cx: 60              
+                cy: 50            
+                start_angle: 225    
+                end_angle: 315      
+                width: 4            
+                radius: 50        
+                # cx: 60             
+                # cy: 50            
+                # start_angle: 230  
+                # end_angle: 310    
+                # width: 4            
+                # radius: 50      
+            entity_index: 0         
+            scale:
+                min: 10              
+                max: 40
+                offset: 1.5          
+                width: 1
+            show:
+                # style: colorlist     
+                scale: true           
+                style: colorstops       
+                lastcolor: false         
+            segments:
+              colorstops:
+                gap: 0.1
+                fill: true
+                stroke: false
+                colors:
+                  15: '#0094ff' 
+                  16: '#00b4ff' 
+                  17: '#00d4ff' 
+                  18: '#00fff4' 
+                  19: '#00ffa8' 
+                  20: '#00ff5c' 
+                  21: '#00ff10'
+                  22: '#3eff00'
+                  23: '#8aff00'
+                  24: '#d7ff00'
+                  25: '#FFfa00'
+                  26: '#FFf000'
+                  27: '#FFe600'
+                  28: '#FFdc00'
+                  29: '#FFd200'
+                  30: '#FFc800'
+                  31: '#FFbe00'
+                  32: '#FFb400'
+                  33: '#FF8200'
+                  34: '#FF6400'
+            styles:
+                background:
+                  fill: grey
+
+    ####################################################
+          - type: 'usersvg'           
+            entity_index: 0
+            position:                
+                cx: 48      
+                cy: 50         
+                height: 60      
+                width: 60     
+            style: 'images'
+            images:             
+              - default: /local/main_picture/температура.png
+
+    ####################################################
+          - type: state
+            position:
+              cx: 138
+              cy: 52
+            entity_index: 0
+            styles:
+              state:
+                text-anchor: center
+                font-size: 40em
+                font-weight: 600
+                opacity: 0.9
+              uom: 
+                opacity: 0.9
+
+    ####################################################
+          - type: bar
+            entity_index: 0
+            position:
+              orientation: vertical
+              cx: 138
+              cy: 52
+              width: 115
+              height: 50
+              margin: .5
+            hours: 24
+            barhours: 1
+            styles:
+              bar:
+                stroke: var(--primary-text-color)
+                opacity: 0.3
+                stroke-linecap: butt
+
+    ####################################################
+          - type: 'segarc'
+            id: 0
+            position:
+              cx: 138
+              cy: 85
+              start_angle: 190
+              end_angle: 170
+              width: 3
+              radius_x: 330
+              radius_y: 1
+            entity_index: 2
+            scale:
+              min: 0
+              max: 100
+              width: 1
+              offset: 3
+            show:
+              scale: true
+              style: 'colorstops'
+            segments:
+              colorstops:
+                gap: 0.1
+                colors:
+                  0:  '#92000A'
+                  10: '#FF0000'
+                  20: '#FF8800'
+                  30: '#FFD600'
+                  40: '#FFFF00'
+                  50: '#CCFF00'
+                  60: '#7FFF00'
+                  70: '#00FF00'
+                  80: '#1CC606'
+                  90: '#009900'
+            styles:
+              foreground:
+                fill: darkgrey
+              background:
+                fill: var(--theme-scale)
+
+    ####################################################
+          - type: state
+            position:
+              cx: 203
+              cy: 15
+            entity_index: 1
+            show:
+              uom: none
+            styles:
+              state:
+                text-anchor: end
+                font-size: 10em
+                font-weight: 700
+                opacity: 0.7
+              uom: 
+                fill: var(--primary-background-color)
+
+    ####################################################
+          - type: 'text'              
+            position:                 
+                cx: 37                
+                cy: 13                
+            text: '40°C'
+            styles:
+                text:
+                  font-size: 9em
+                  font-weight: 600
+                  opacity: 0.7
+
+    ####################################################
+          - type: 'text'              
+            position:                 
+                cx: 37      
+                cy: 87      
+            text: '10°C'
+            styles:
+                text:
+                  font-size: 9em
+                  font-weight: 600
+                  opacity: 0.7
+
+    ####################################################
+          - type: rectex
+            position:
+              cx: 104
+              cy: 50
+              width: 208
+              height: 100
+              radius:
+                top_left: 0
+                top_right: 0
+                bottom_right: 0
+                bottom_left: 0
+            styles:
+              rectex:
+                stroke: var(--primary-background-color)
+                opacity: 0
+            user_actions:
+                tap_action:
+                  haptic: success
+                  actions:
+                    - action: call-service
+                      service: '[[run_script]]'
+    ####################################################
+
