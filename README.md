@@ -3,6 +3,13 @@
 Подробности установки в видео:
 https://youtu.be/uH5HBbDr9wg
 
+# 24.06.2023
+добавлены карты:
+ - Температура комнатная половинной высоты с батарейкой 	(template: main-min-temperature-room)
+ - Влажность половинной высоты с батарейкой 			(template: main-min-humidity)
+![alt tag](https://github.com/kkggaa45/swiss_kap/blob/main/github_pict/readme_5.png)
+
+
 # 21.06.2023
 добавлена вкладка "title: Сенсоры"
 
