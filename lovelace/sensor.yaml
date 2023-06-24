@@ -90,3 +90,27 @@ cards:
               - shadow: url(#nm-11)                                 
               - run_script: 'script.none'         
 
+      - type: horizontal-stack
+        cards:
+    
+        ### Температура комнатная половинной высоты с батарейкой
+          - type: custom:decluttering-card
+            template: main-min-temperature-room
+            variables:
+              - entity_temperature: sensor.openweathermap_temperature_1     ##### Здесь указать сенсор температура
+              - entity_battery: sensor.openweathermap_humidity_1            ##### Здесь указать сенсор заряда батарейки
+              - name_sensor: Спальня
+              - shadow: url(#nm-11)                                 
+              - color_on: '#A58CD4'                          
+              - run_script: 'script.none'                    
+
+        ### Влажность половинной высоты с батарейкой
+          - type: custom:decluttering-card
+            template: main-min-humidity
+            variables:
+              - entity_humidity: sensor.openweathermap_humidity_1     ##### Здесь указать сенсор Влажность
+              - entity_battery: sensor.openweathermap_humidity_1            ##### Здесь указать сенсор заряда батарейки
+              - name_sensor: Спальня
+              - shadow: url(#nm-11)                                 
+              - color_on: '#A58CD4'                          
+              - run_script: 'script.none'                    
