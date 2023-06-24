@@ -30,3 +30,9 @@ main-circle-percent:
 
 main-circle-percent-battery:
   !include main-circle-percent-battery.yaml
+  
+main-min-temperature-room:
+  !include main-min-temperature-room.yaml
+  
+main-min-humidity:
+  !include main-min-humidity.yaml
