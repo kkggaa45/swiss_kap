@@ -1,24 +1,16 @@
 switch_1:
     alias: switch_1
     sequence:
-      - service: switch.toggle
+      - service: input_boolean.toggle
         target:
-            entity_id: switch.sushilka_switch_1_2
+            entity_id: input_boolean.sensor_temp 
 
 switch_2:
     alias: switch_2
     sequence:
       - service: switch.toggle
         target:
-            entity_id: switch.sensornyi_vykliuchatel_3_kh_polosnyi_switch_1
-
-switch_3:
-    alias: switch_3
-    sequence:
-      - service: switch.toggle
-        target:
-            entity_id: switch.osmos_switch_1
-
+            entity_id: switch.tz3000_dksbtrzs_ts011f_switch
 
 none:
     alias: none
