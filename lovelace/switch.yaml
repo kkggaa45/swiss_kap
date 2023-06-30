@@ -1,0 +1,45 @@
+title: Выключатели
+cards:
+
+  - type: vertical-stack
+    cards:
+
+      - type: horizontal-stack
+        cards:
+    
+        ### Выключатель квадратный
+          - type: custom:decluttering-card
+            template: main-box-switch
+            variables:
+              - entity_switch: input_boolean.sensor_temp                ##### Здесь указать сенсор
+              - name_switch: Спальня
+              - picture_on: лампа-вкл.png
+              - picture_off: лампа-выкл.png
+              - shadow: url(#nm-1)                                 
+              - color_on: red                          
+              - run_script: 'script.switch_1'                  
+
+        ### Выключатель круглый 
+          - type: custom:decluttering-card
+            template: main-circle-switch
+            variables:
+              - entity_switch: input_boolean.sensor_temp                ##### Здесь указать сенсор
+              - name_switch: Спальня
+              - picture_on: лампа-вкл.png
+              - picture_off: лампа-выкл.png
+              - shadow: url(#filterb)                                   ##### sak-inset-1, sak-inset-2, is-1, is-1b, nm-2, filter-yoksel, filter, filterb, bold, filterss, nm-11, nm-1, sak-nm-default, sak-nm-default-b, nm-1b, nm-1-reverse, nm-1b-reverse, sak-drop-1, sak-drop-1a, sak-drop-1b, sak-drop-2, sak-drop-3, sak-drop-4
+              - color_on: blue                          
+              - run_script: 'script.switch_1'                  
+
+    ### Выключатель половинной высоты с энергомониторингом
+      - type: custom:decluttering-card
+        template: main-min-switch
+        variables:
+            - entity_switch: switch.tz3000_dksbtrzs_ts011f_switch       ##### Здесь указать Выключатель
+            - entity_power: sensor.tz3000_dksbtrzs_ts011f_active_power  ##### Здесь указать сенсор
+            - entity_voltage: sensor.tz3000_dksbtrzs_ts011f_rms_voltage ##### Здесь указать сенсор
+            - entity_current: sensor.tz3000_dksbtrzs_ts011f_rms_current ##### Здесь указать сенсор
+            - picture_on: лампа-вкл.png
+            - picture_off: лампа-выкл.png
+            - color_on: green                       
+            - run_script: 'script.test_1'           
