@@ -1,0 +1,283 @@
+default:
+  - run_script: 'script.none'
+  - color_on: var(--primary-background-color)
+  - shadow: url(#nm-11)
+
+card:
+  type: 'custom:swiss-army-knife-card'
+
+  entities: 
+    - entity: '[[entity_switch]]'
+
+    - entity: '[[entity_switch]]'
+      secondary_info: last_updated
+      format: relative
+
+    - entity: '[[entity_power]]'
+      decimals: 0
+
+    - entity: '[[entity_current]]'
+      decimals: 1
+
+    - entity: '[[entity_voltage]]'
+      decimals: 0
+
+  aspectratio: 2.1/1
+  dev:
+    debug: false
+    ts: true
+  
+  layout:
+    styles:
+      toolsets:
+        filter: '[[shadow]]'
+
+    toolsets:
+      - toolset: square-sensor
+        position:
+          cx: 50
+          cy: 50
+          scale: 1
+        tools:
+    ####################################################
+          - type: rectex
+            entity_index: 0      
+            position:
+              cx: 105
+              cy: 50
+              width: 200
+              height: 90
+              radius:
+                top_left: 50
+                top_right: 10
+                bottom_right: 10
+                bottom_left: 50
+            animations:
+              - state: 'on'
+                styles:
+                  rectex:
+                    stroke: var(--primary-background-color)
+                    fill: '[[color_on]]'
+              - state: 'off'
+                styles:
+                  rectex:
+                    stroke: var(--primary-background-color)
+                    fill: var(--primary-background-color)
+
+    ####################################################
+          - type: 'segarc'
+            position:               
+                cx: 60              
+                cy: 50            
+                start_angle: 225    
+                end_angle: 315      
+                width: 4            
+                radius: 50        
+            entity_index: 3        
+            scale:
+                min: 0              
+                max: 16
+                offset: 1.5          
+                width: 1
+            show:
+                # style: colorlist     
+                scale: true           
+                style: colorstops       
+                lastcolor: false         
+            segments:
+              colorstops:
+                gap: 0.1
+                fill: true
+                stroke: false
+                colors:
+                  15: '#A50000' 
+                  14: '#FE0000' 
+                  13: '#FF6400' 
+                  12: '#FFbe00' 
+                  11: '#FFdc00' 
+                  10: '#FFfa00' 
+                  9: '#C9F66F' 
+                  8: '#9EED00' 
+                  7: '#00ffa8' 
+                  6: '#00ffa8' 
+                  5: '#33CCCC' 
+                  4: '#009999'
+                  3: '#4671D5'
+                  2: '#1240AA'
+                  1: '#3914AF'
+                  0: '#200672'
+            styles:
+                background:
+                  fill: grey
+
+    ####################################################
+          - type: 'usersvg'           
+            entity_index: 0
+            position:                
+                cx: 47      
+                cy: 50         
+                height: 60      
+                width: 60     
+            style: 'images'
+            images:             
+                - picture_off: /local/main_picture/[[picture_off]]
+                - picture_on: /local/main_picture/[[picture_on]]
+            animations:
+                - state: 'on'
+                  image: picture_on
+                - state: 'off'
+                  image: picture_off
+
+    ####################################################
+          - type: state
+            position:
+              cx: 138
+              cy: 52
+            entity_index: 2
+            styles:
+              state:
+                text-anchor: center
+                font-size: 40em
+                font-weight: 600
+                opacity: 0.9
+              uom: 
+                opacity: 0.9
+
+    ####################################################
+          - type: 'text'              
+            position:                 
+                cx: 80               
+                cy: 86                
+            text: 'Напряжение:'
+            styles:
+                text:
+                  text-anchor: start
+                  font-size: 7em
+                  font-weight: 600
+                  opacity: 0.7
+
+    ####################################################
+          - type: state
+            position:
+              cx: 148
+              cy: 86
+            entity_index: 4
+            styles:
+              state:
+                text-anchor: end
+                font-size: 10em
+                font-weight: 600
+                opacity: 0.9
+              uom: 
+                opacity: 0.9
+
+    ####################################################
+          - type: 'text'              
+            position:                 
+                cx: 155              
+                cy: 86                
+            text: 'Ток:'
+            styles:
+                text:
+                  text-anchor: start
+                  font-size: 7em
+                  font-weight: 600
+                  opacity: 0.7
+
+    ####################################################
+          - type: state
+            position:
+              cx: 190
+              cy: 86
+            entity_index: 3
+            styles:
+              state:
+                text-anchor: end
+                font-size: 10em
+                font-weight: 600
+                opacity: 0.9
+              uom: 
+                opacity: 0.9
+
+    ####################################################
+          - type: bar
+            entity_index: 2
+            position:
+              orientation: vertical
+              cx: 138
+              cy: 52
+              width: 115
+              height: 50
+              margin: .5
+            hours: 24
+            barhours: 1
+            styles:
+              bar:
+                stroke: var(--primary-text-color)
+                opacity: 0.3
+                stroke-linecap: butt
+
+    ####################################################
+          - type: state
+            position:
+              cx: 203
+              cy: 15
+            entity_index: 1
+            show:
+              uom: none
+            styles:
+              state:
+                text-anchor: end
+                font-size: 10em
+                font-weight: 700
+                opacity: 0.7
+              uom: 
+                fill: var(--primary-background-color)
+
+    ####################################################
+          - type: 'text'              
+            position:                 
+                cx: 37                
+                cy: 13                
+            text: '16А'
+            styles:
+                text:
+                  font-size: 9em
+                  font-weight: 600
+                  opacity: 0.7
+
+    ####################################################
+          - type: 'text'              
+            position:                 
+                cx: 33      
+                cy: 87      
+            text: '0А'
+            styles:
+                text:
+                  font-size: 9em
+                  font-weight: 600
+                  opacity: 0.7
+
+    ####################################################
+          - type: rectex
+            position:
+              cx: 104
+              cy: 50
+              width: 208
+              height: 100
+              radius:
+                top_left: 0
+                top_right: 0
+                bottom_right: 0
+                bottom_left: 0
+            styles:
+              rectex:
+                stroke: var(--primary-background-color)
+                opacity: 0
+            user_actions:
+                tap_action:
+                  haptic: success
+                  actions:
+                    - action: call-service
+                      service: '[[run_script]]'
+    ####################################################
