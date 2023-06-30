@@ -1,0 +1,180 @@
+default:
+  - run_script: 'script.none'
+  - color_on: var(--primary-background-color)
+  - shadow: url(#nm-11)
+
+
+card:
+  type: 'custom:swiss-army-knife-card'
+
+  entities: 
+    - entity: '[[entity_switch]]'
+      name: '[[name_switch]]'
+      picture_on: '[[picture_on]]'
+      picture_off: '[[picture_off]]'
+      color_on: '[[color_on]]'
+
+    - entity: '[[entity_switch]]'
+      secondary_info: last_updated
+      format: relative
+
+  aspectratio: 1/1
+  dev:
+    debug: false
+    ts: true
+  
+  layout:
+    styles:
+      toolsets:
+        filter: '[[shadow]]'
+
+    toolsets:
+      - toolset: square-sensor
+        position:
+          cx: 50
+          cy: 50
+          scale: 1
+        tools:
+
+    ####################################################
+          - type: circle
+            position:
+              cx: 50
+              cy: 50
+              radius: 46
+            entity_index: 0
+            styles:
+              circle:
+                pointer-events: none
+                stroke-width: 5
+                fill: var(--primary-background-color)
+                filter: '[[shadow]]'
+            animations:
+              - state: 'on'
+                styles:
+                  circle:
+                    stroke: var(--primary-background-color)
+                    fill: '[[color_on]]'
+              - state: 'off'
+                styles:
+                  circle:
+                    stroke: var(--primary-background-color)
+                    fill: var(--primary-background-color)
+
+    ####################################################
+          - type: 'usersvg'           
+            entity_index: 0
+            position:                
+                cx: 50      
+                cy: 38        
+                height: 50    
+                width: 50  
+            style: 'images'
+            images:             
+                - picture_off: /local/main_picture/[[picture_off]]
+                - picture_on: /local/main_picture/[[picture_on]]
+            animations:
+                - state: 'on'
+                  image: picture_on
+                - state: 'off'
+                  image: picture_off
+
+    ####################################################
+          - type: state
+            position:
+              cx: 50
+              cy: 79.5
+            entity_index: 1
+            show:
+              uom: none
+            styles:
+              state:
+                text-anchor: center
+                font-size: 5em
+                font-weight: 500
+                opacity: 0.5
+              uom: 
+                fill: var(--primary-background-color)
+
+    ####################################################
+          - type: name
+            position:
+              cx: 50
+              cy: 68
+            entity_index: 0
+            styles:
+              name:
+                text-anchor: center
+                font-size: 9em
+                font-weight: 700
+
+    ####################################################
+          - type: 'line'             
+            position:          
+                orientation: 'horizontal'
+                cx: 50               
+                cy: 75           
+                length: 60      
+            styles:
+              line:
+                opacity: 0.5
+
+    ####################################################
+          - type: 'line'             
+            position:          
+                orientation: 'horizontal'
+                cx: 50               
+                cy: 76          
+                length: 56      
+            styles:
+              line:
+                opacity: 0.5
+
+    ####################################################
+          - type: circle
+            position:
+              cx: 50
+              cy: 50
+              radius: 41.2
+            styles:
+              circle:
+                stroke: gray
+                stroke-width: 1em
+                fill: none
+
+    ####################################################
+          - type: circle
+            position:
+              cx: 50
+              cy: 50
+              radius: 43
+            styles:
+              circle:
+                stroke: gray
+                stroke-width: 1em
+                fill: none
+
+    ####################################################
+          - type: rectex
+            position:
+              cx: 50
+              cy: 50
+              width: 100
+              height: 100
+              radius:
+                top_left: 0
+                top_right: 0
+                bottom_right: 0
+                bottom_left: 0
+            styles:
+              rectex:
+                stroke: var(--primary-background-color)
+                opacity: 0
+            user_actions:
+                tap_action:
+                  haptic: success
+                  actions:
+                    - action: call-service
+                      service: '[[run_script]]'
+
+    ####################################################
