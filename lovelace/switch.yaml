@@ -42,4 +42,4 @@ cards:
             - picture_on: лампа-вкл.png
             - picture_off: лампа-выкл.png
             - color_on: green                       
-            - run_script: 'script.test_1'           
+            - run_script: 'script.switch_2'           
