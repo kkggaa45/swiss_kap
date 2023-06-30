@@ -36,3 +36,13 @@ main-min-temperature-room:
   
 main-min-humidity:
   !include main-min-humidity.yaml
+
+main-box-switch:
+  !include main-box-switch.yaml
+
+main-circle-switch:
+  !include main-circle-switch.yaml
+  
+main-min-switch:
+  !include main-min-switch.yaml
+
