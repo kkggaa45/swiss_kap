@@ -3,6 +3,16 @@
 Подробности установки в видео:
 https://youtu.be/uH5HBbDr9wg
 
+# 30.06.2023
+добавлена вкладка "title: Выключатели"
+
+добавлены карты:
+ - Выключатель квадратный				 	(template: main-box-switch)
+ - Выключатель круглый			 			(template: main-circle-switch)
+ - Выключатель половинной высоты с энергомониторингом		(main-min-switch)
+![alt tag](https://github.com/kkggaa45/swiss_kap/blob/main/github_pict/readme_6.jpg)
+![alt tag](https://github.com/kkggaa45/swiss_kap/blob/main/github_pict/readme_7.jpg)
+
 # 24.06.2023
 добавлены карты:
  - Температура комнатная половинной высоты с батарейкой 	(template: main-min-temperature-room)
