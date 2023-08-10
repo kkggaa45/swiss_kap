@@ -10,7 +10,7 @@ https://youtu.be/uH5HBbDr9wg
  - Меню комнаты с информационной панелью 2х2			(template: header_room_2x2)
  - Меню комнаты с информационной панелью 3х2			(template: header_room_3x2)
  - Меню комнаты с информационной панелью 4х3			(template: header_room_4x3)
-![alt tag](https://github.com/kkggaa45/swiss_kap/blob/main/github_pict/readme_8.jpg)
+![alt tag](https://github.com/kkggaa45/swiss_kap/blob/main/github_pict/readme_8.png)
 
 # 30.06.2023
 добавлена вкладка "title: Выключатели"
