@@ -1,0 +1,148 @@
+title: Комнаты
+cards:
+
+  - type: vertical-stack
+    cards:
+      - type: entities
+        entities:
+          - entity: input_boolean.sensor_temp 
+            name: эмулятор сенсора
+
+    ### Меню комнаты 2х2
+      - type: custom:decluttering-card
+        template: header_room_2x2
+        variables:
+          - entity_temperature: sensor.openweathermap_temperature_1
+          - entity_humidity: sensor.openweathermap_humidity_1
+          - name_room: Спальня
+          - picture_room: cпальня-квадрат.png
+          - shadow: url(#nm-11)                                                 ### Необязательный параметр
+          - run_script: 'script.m10'                                            ### Необязательный параметр
+          - color_on: blue                                                      ### Необязательный параметр
+          - entity_11: input_boolean.sensor_temp 
+        #   - entity_12: input_boolean.sensor_temp 
+        #   - entity_21: input_boolean.sensor_temp 
+        #   - entity_22: input_boolean.sensor_temp 
+          - picture_11_on: лампа-вкл.png
+        #   - picture_12_on: лампа-вкл.png
+        #   - picture_21_on: лампа-вкл.png
+        #   - picture_22_on: лампа-вкл.png
+          - picture_11_off: null-2.png                                      ### см. примечание ниже
+          - picture_12_off: null-2.png                                      ### см. примечание ниже
+          - picture_21_off: null-2.png                                      ### см. примечание ниже
+          - picture_22_off: null-2.png                                      ### см. примечание ниже
+        # ###     Матрица состояний
+        # ###
+        # ###     11  12  
+        # ###     21  22 
+        # ###
+        # ###     по умолчанию все датчики неактивны
+        # ###     если надо указать допустим датчик с координатами 12
+        # ###     необходимо прописать 
+        # ###          - entity_12: binary_sensor.lumi_lumi_sensor_magnet_aq2_opening        
+        # ###          - picture_12_on: дверь-откр.png                                      
+        # ###          - picture_12_off: дверь-закр.png                                      
+        # ###     и так для каждого необходимого датчика
+
+    ### Меню комнаты 3х2
+      - type: custom:decluttering-card
+        template: header_room_3x2
+        variables:
+          - entity_temperature: sensor.openweathermap_temperature_1
+          - entity_humidity: sensor.openweathermap_humidity_1
+          - name_room: Спальня
+          - picture_room: cпальня-квадрат.png
+          - shadow: url(#nm-11)                                                 ### Необязательный параметр
+          - run_script: 'script.m10'                                            ### Необязательный параметр
+          - color_on: red                                                       ### Необязательный параметр
+        #   - entity_11: input_boolean.sensor_temp 
+        #   - entity_12: input_boolean.sensor_temp 
+        #   - entity_13: input_boolean.sensor_temp 
+        #   - entity_21: input_boolean.sensor_temp 
+        #   - entity_22: input_boolean.sensor_temp 
+          - entity_23: input_boolean.sensor_temp 
+        #   - picture_11_on: лампа-вкл.png
+        #   - picture_12_on: лампа-вкл.png
+        #   - picture_13_on: лампа-вкл.png
+        #   - picture_21_on: лампа-вкл.png
+        #   - picture_22_on: лампа-вкл.png
+          - picture_23_on: дверь-откр.png 
+          - picture_11_off: null-2.png                                      ### см. примечание ниже
+          - picture_12_off: null-2.png                                      ### см. примечание ниже
+          - picture_13_off: null-2.png                                      ### см. примечание ниже
+          - picture_21_off: null-2.png                                      ### см. примечание ниже
+          - picture_22_off: null-2.png                                      ### см. примечание ниже
+          - picture_23_off: дверь-закр.png                                  ### см. примечание ниже
+        # ###     Матрица состояний
+        # ###
+        # ###     11  12  13
+        # ###     21  22  23 
+        # ###
+        # ###     по умолчанию все датчики неактивны
+        # ###     если надо указать допустим датчик с координатами 12
+        # ###     необходимо прописать 
+        # ###          - entity_12: binary_sensor.lumi_lumi_sensor_magnet_aq2_opening        
+        # ###          - picture_12_on: дверь-откр.png                                      
+        # ###          - picture_12_off: дверь-закр.png                                      
+        # ###     и так для каждого необходимого датчика
+
+    ### Меню комнаты 4х3
+      - type: custom:decluttering-card
+        template: header_room_4x3
+        variables:
+          - entity_temperature: sensor.openweathermap_temperature_1
+          - entity_humidity: sensor.openweathermap_humidity_1
+          - name_room: Спальня
+          - picture_room: cпальня-квадрат.png
+          - shadow: url(#nm-11)                                                 ### Необязательный параметр
+          - run_script: 'script.m10'                                            ### Необязательный параметр
+          - color_on: green                                                     ### Необязательный параметр
+        #   - entity_11: input_boolean.sensor_temp 
+        #   - entity_12: input_boolean.sensor_temp 
+        #   - entity_13: input_boolean.sensor_temp 
+        #   - entity_14: input_boolean.sensor_temp 
+        #   - entity_21: input_boolean.sensor_temp 
+        #   - entity_22: input_boolean.sensor_temp 
+        #   - entity_23: input_boolean.sensor_temp 
+        #   - entity_24: input_boolean.sensor_temp 
+        #   - entity_31: input_boolean.sensor_temp 
+        #   - entity_32: input_boolean.sensor_temp 
+        #   - entity_33: input_boolean.sensor_temp 
+          - entity_34: input_boolean.sensor_temp 
+        #   - picture_11_on: лампа-вкл.png
+        #   - picture_12_on: лампа-вкл.png
+        #   - picture_13_on: лампа-вкл.png
+        #   - picture_14_on: лампа-вкл.png
+        #   - picture_21_on: лампа-вкл.png
+        #   - picture_22_on: лампа-вкл.png
+        #   - picture_23_on: лампа-вкл.png
+        #   - picture_24_on: лампа-вкл.png
+        #   - picture_31_on: лампа-вкл.png
+        #   - picture_32_on: лампа-вкл.png
+        #   - picture_33_on: лампа-вкл.png
+          - picture_34_on: окно_откр.png
+          - picture_11_off: null-2.png                                      ### см. примечание ниже
+          - picture_12_off: null-2.png                                      ### см. примечание ниже
+          - picture_13_off: null-2.png                                      ### см. примечание ниже
+          - picture_14_off: null-2.png                                      ### см. примечание ниже
+          - picture_21_off: null-2.png                                      ### см. примечание ниже
+          - picture_22_off: null-2.png                                      ### см. примечание ниже
+          - picture_23_off: null-2.png                                      ### см. примечание ниже
+          - picture_24_off: null-2.png                                      ### см. примечание ниже
+          - picture_31_off: null-2.png                                      ### см. примечание ниже
+          - picture_32_off: null-2.png                                      ### см. примечание ниже
+          - picture_33_off: null-2.png                                      ### см. примечание ниже
+          - picture_34_off: окно_закр.png                                  ### см. примечание ниже
+        # ###     Матрица состояний
+        # ###
+        # ###     11  12  13  14
+        # ###     21  22  23  24
+        # ###     31  32  33  34
+        # ###
+        # ###     по умолчанию все датчики неактивны
+        # ###     если надо указать допустим датчик с координатами 12
+        # ###     необходимо прописать 
+        # ###          - entity_12: binary_sensor.lumi_lumi_sensor_magnet_aq2_opening        
+        # ###          - picture_12_on: дверь-откр.png                                      
+        # ###          - picture_12_off: дверь-закр.png                                      
+        # ###     и так для каждого необходимого датчика
