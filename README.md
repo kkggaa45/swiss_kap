@@ -3,10 +3,19 @@
 Подробности установки в видео:
 https://youtu.be/uH5HBbDr9wg
 
+# 10.08.2023
+добавлена вкладка "title: Комнаты"
+
+добавлены карты:
+ - Меню комнаты с информационной панелью 2х2			(template: header_room_2x2)
+ - Меню комнаты с информационной панелью 3х2			(template: header_room_3x2)
+ - Меню комнаты с информационной панелью 4х3			(template: header_room_4x3)
+![alt tag](https://github.com/kkggaa45/swiss_kap/blob/main/github_pict/readme_8.jpg)
+
 # 30.06.2023
 добавлена вкладка "title: Выключатели"
 
-добавлены карты:
+добавлены карты: 
  - Выключатель квадратный				 	(template: main-box-switch)
  - Выключатель круглый			 			(template: main-circle-switch)
  - Выключатель половинной высоты с энергомониторингом		(main-min-switch)
