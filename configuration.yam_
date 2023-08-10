@@ -9,7 +9,21 @@ homeassistant:
 default_config:
 
 frontend:
-  themes: !include_dir_merge_named themes/
+    themes: 
+        day_and_night:
+            primary-color: '#055BFA'
+            ha-card-border-width: 0px
+            modes:
+                light:
+                    primary-background-color: '#F2F2F2'
+                    theme-scale:              '#D0D0D0'
+                dark:
+                    primary-background-color: '#282828'
+                    theme-scale:              '#3D3D3D'
+    extra_module_url:
+      - /local/custom-brand-icons.js
+# frontend:
+#   themes: !include_dir_merge_named themes/
 
 lovelace:
   mode: yaml
@@ -18,6 +32,16 @@ lovelace:
       type: module
     - url: /local/community/swiss-army-knife-card/swiss-army-knife-card.js
       type: module  
+    - url: /local/community/lovelace-mushroom/mushroom.js
+      type: module
+    - url: /local/community/stack-in-card/stack-in-card.js
+      type: module
+    - url: /local/community/text-divider-row/text-divider-row.js
+      type: module
+    - url: /local/community/lovelace-card-mod/card-mod.js
+      type: module  
+    - url: /local/community/lovelace-layout-card/layout-card.js
+      type: module
 
 sensor: !include_dir_merge_list includes/sensors
 binary_sensor: !include_dir_merge_list includes/bin_sensors
