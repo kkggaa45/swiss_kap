@@ -46,3 +46,12 @@ main-circle-switch:
 main-min-switch:
   !include main-min-switch.yaml
 
+header_room_2x2:
+  !include header_room_2x2.yaml
+
+header_room_3x2:
+  !include header_room_3x2.yaml
+
+header_room_4x3:
+  !include header_room_4x3.yaml
+
