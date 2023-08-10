@@ -7,6 +7,13 @@ sak_sys_templates:
 sak_user_templates:
   !include lovelace/sak_templates/sak_templates.yaml
 
+resources:
+  - type: js
+    url: /local/custom-brand-icons.js
+
 views:
   - !include lovelace/all_in_one.yaml
   - !include lovelace/pogoda.yaml
+  - !include lovelace/sensor.yaml
+  - !include lovelace/switch.yaml
+  - !include lovelace/header_room.yaml
